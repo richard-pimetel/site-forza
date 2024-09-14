@@ -1,0 +1,106 @@
+/* reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul, ol, li {
+    list-style: none;
+}
+
+/* fim do reset */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 80px;
+    background-color: #121212; /* Fundo escuro */
+}
+header {
+    height: 200px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    height: 96px;
+    width: 96px;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/d/d9/Forza_new_logo.png');
+    background-color: #fff;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.menu ul {
+    display: flex;
+    gap: 32px;
+    font-size: 32px;
+    color: #ffffff;
+}
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between; /* Colocar itens lado a lado */
+    align-items: center; /* Alinha o conteúdo e a imagem verticalmente ao centro */
+    gap: 20px; /* Espaço entre o conteúdo e a imagem */
+}
+.conteudo {
+    width: 50%;
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 10px;
+}
+.conteudo h1 {
+    font-size: 96px;
+    color: #F4C542;
+}
+.conteudo p {
+    font-size: 40px;
+    color: #FFFFFF;
+}
+.acao button {
+    height: 80px;
+    width: 300px;
+    background-color: #F4C542;
+    color: black;
+    font-size: 32px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.acao button:hover {
+    background-color: #e3b93e;
+}
+.imagem-container {
+    width: 50%;
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Alinha a imagem verticalmente */
+}
+.imagem-container img {
+    width: 420px; /* Largura fixa da imagem */
+    height: 300px; /* Altura fixa da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+footer {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column; /* Empilha o conteúdo e a imagem em telas menores */
+    }
+    .conteudo, .imagem-container {
+        width: 100%;
+    }
+}
